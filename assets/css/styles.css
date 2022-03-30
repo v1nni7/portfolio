@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --body-bg-color: #22212C;
+  --text-color: #837E9F;
+  --bg-cards: #302F3D;
+  --bg-techs: #CB92B1;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-areas: 
+  "aside main"
+  "aside main"
+  "aside footer"
+  ;
+  padding: 40px;
+  grid-template-columns: 400px;
+  background-color: var(--body-bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 8px 0;
+}
+
+aside {
+  display: flex;
+  grid-area: aside;
+  flex-direction: column;
+  color: var(--text-color);
+}
+
+a {
+  transition: 0.2s;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  color: #6e62b8;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-6 {
+  width: 50%;
+  flex: 0 0 auto;
+}
+
+.card {
+  margin: 12px;
+  padding: 24px;
+  display: flex;
+  border-radius: 12px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text-color);
+  background-color: var(--bg-cards);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.title {
+  width: 100%;
+  text-align: start;
+}
+
+.user-info h1 {
+  margin: 16px 0 8px;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.user-info h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.user-image {
+  background-image: url(../images/Vinicius.jpg);
+  background-position-y: -40px;
+  background-size: cover;
+  border-radius: 50%;
+  height: 156px;
+  width: 156px;
+  border: 2px #00ca00 solid;
+}
+
+.user-social-networks ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+.user-social-networks li {
+  padding: 8px;
+}
+
+.user-social-networks a {
+  display: flex;
+  align-items: center;
+}
+
+.user-social-networks svg {
+  margin-right: 8px;
+}
+
+.tech {
+  width: 30%;
+  margin: 4px;
+  padding: 6px;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 24px;
+  text-transform: uppercase;
+  font-size: .8rem;
+  background-color: var(--bg-techs);
+}
+
+.user-education ul,
+.user-experiences ul {
+  width: 100%;
+}
+
+.user-education li,
+.user-experiences li {
+  padding: 8px 0;
+}
+
+.user-education h3,
+.user-experiences h3 {
+  font-size: 1rem;
+}
+
+.user-education h4,
+.user-experiences h4 {
+  font-weight: 400;
+  font-size: .85rem;
+}
+
+.user-education h5,
+.user-experiences h5 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+main {
+  grid-area: main;
+}
+
+.title-portfolio {
+  margin: 12px;
+  padding: 24px;
+  display: flex;
+  border-radius: 12px;
+  align-items: center;
+  color: var(--text-color);
+  justify-content: space-between;
+  background-color: var(--bg-cards);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.title-portfolio h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.row-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-portfolio {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.card-portfolio {
+  margin: 12px;
+  padding: 24px;
+  display: flex;
+  border-radius: 12px;
+  align-items: flex-start;
+  flex-direction: column;
+  color: var(--text-color);
+  background-color: var(--bg-cards);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.name-portfolio h2 {
+  margin: 0;
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.name-portfolio svg {
+  margin-right: 8px;
+}
+
+.desc-portfolio p {
+  text-align: justify;
+}
+
+.info-portfolio {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-portfolio ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+}
+
+.info-portfolio li {
+  margin: 8px;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+}
+
+.info-portfolio svg {
+  margin-right: 6px;
+}
+
+.info-portfolio .language {
+  display: flex;
+  align-items: center;
+}
+
+.info-portfolio .language h4 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.info-portfolio .javascript {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 2px #ccc solid;
+  background-color: #ffff70;
+}
+
+#posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.post .user-image {
+  margin: 16px 0;
+}
+
+.body-post {
+  margin: 16px;
+}
+
+.title-post {
+  margin-bottom: 24px;
+}
+
+.title-post h6 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.desc-post p {
+  font-weight: 500;
+}
+
+.tags ul {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.tags li {
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .col-portfolio {
+    width: 50%;
+  }
+}
+
+
+
+
+
